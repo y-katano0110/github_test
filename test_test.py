@@ -6,8 +6,11 @@ def test_conversionString():
     """ conversionString()のテスト
     """
 
-    str = test1.conversionString("test", 99, True)
-    assert str == "name:test age:99 is_student:1"
+    str = test1.conversionString("truetest", 99, True)
+    assert str == "name:truetest age:99 is_student:1"
+
+    str = test1.conversionString("falsetest", 100, False)
+    assert str == "name:falsetest age:100 is_student:0"
 
 def test_calculation(capfd):
     """ calculation()のテスト
